@@ -1,0 +1,191 @@
+[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "ask_product_name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "ask_product_id",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "ask_owner_name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "new_owner_address",
+				"type": "address"
+			},
+			{
+				"name": "new_owner_name",
+				"type": "string"
+			},
+			{
+				"name": "p_id",
+				"type": "string"
+			},
+			{
+				"name": "new_owner_location",
+				"type": "string"
+			}
+		],
+		"name": "change_owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"name": "p_name",
+				"type": "string"
+			},
+			{
+				"name": "model_",
+				"type": "string"
+			},
+			{
+				"name": "brand_",
+				"type": "string"
+			},
+			{
+				"name": "owner_",
+				"type": "string"
+			},
+			{
+				"name": "owner_loc",
+				"type": "string"
+			},
+			{
+				"name": "m_name",
+				"type": "string"
+			}
+		],
+		"name": "addProduct",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "manufacturer",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "ask_owner_location",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "ask_manufacturer_name",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+]
