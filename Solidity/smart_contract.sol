@@ -2,10 +2,12 @@ pragma solidity ^0.4.17;
  
  contract Authentic {
      address public manufacturer;
+     address[] a = new address[](1);
      
      //Constructor to initialize manufacturer who deploy this contract
      function Authentic()public{
          manufacturer=msg.sender;
+         a.push(manufacturer);
      }
      
      // Structure to keep product details
@@ -21,7 +23,7 @@ pragma solidity ^0.4.17;
      }
      
      modifier restricted(){
-         require(manufacturer==msg.sender,"You can not add Product");
+         require(ask_manufacturer_address()==msg.sender, "You are not authorized");
          _;
      }
      
@@ -62,6 +64,16 @@ pragma solidity ^0.4.17;
     function ask_owner_name(string _id) public view returns (string){
           return(product_array[_id].owner);
     }
+    
+    //Returns caller address
+    function ask_manufacturer_address() public view returns (address){
+          return(a[1]);
+    }
+    
+    // function ask_len() public view returns (uint){
+    //       return(a.length);
+    // }
+    
       
     //Returns owner location
     function ask_owner_location(string _id) public view returns (string){
@@ -81,6 +93,12 @@ pragma solidity ^0.4.17;
     //Returns Poduct id
     function ask_product_id(string _id) public view returns (string){
           return(product_array[_id].product_id);
+    }
+    function ask_model(string _id) public view returns (string){
+          return(product_array[_id].model);
+    }
+    function ask_brand(string _id) public view returns (string){
+          return(product_array[_id].brand);
     }
     
 }
